@@ -1,0 +1,100 @@
+Customer Name: Joe Turing
+Checking balance before transaction: $4124.50
+Transaction Type: D
+Transaction amount: $200.00
+Checking balance after transaction: $4324.50
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Charles Babbage
+Checking balance before transaction: $300.00
+Transaction Type: D
+Transaction amount: $100.00
+Checking balance after transaction: $400.00
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Sam Backus
+Checking balance before transaction: $350.25
+Transaction Type: W
+Transaction amount: $51.00
+Checking balance after transaction: $299.25
+Warning: The account is below $300.
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Sam Hopper
+Checking balance before transaction: $600.50
+Transaction Type: X
+Transaction amount: $600.00
+Checking balance after transaction: $600.50
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Robert McCarthy
+Checking balance before transaction: $1000.00
+Transaction Type: R
+Transaction amount: $0.00
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Jack Atanasoff
+Checking balance before transaction: $200.00
+Transaction Type: W
+Transaction amount: $200.00
+Checking balance after transaction: $0.00
+Warning: The account is below $300.
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Anne Stroustrup
+Checking balance before transaction: $300.75
+Transaction Type: W
+Transaction amount: $301.00
+Checking balance after transaction: $-0.25
+Warning: The account is below $300.
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Amanda Hollerith
+Checking balance before transaction: $500.00
+Transaction Type: W
+Transaction amount: $-2.00
+Checking balance after transaction: $502.00
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Joe Turing
+Checking balance before transaction: $4124.50
+Transaction Type: D
+Transaction amount: $200.00
+Checking balance after transaction: $4324.50
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Charles Babbage
+Checking balance before transaction: $300.00
+Transaction Type: D
+Transaction amount: $100.00
+Checking balance after transaction: $400.00
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Sam Backus
+Checking balance before transaction: $350.25
+Transaction Type: W
+Transaction amount: $51.00
+Checking balance after transaction: $299.25
+Warning: The account is below $300.
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Sam Hopper
+Checking balance before transaction: $600.50
+Transaction Type: X
+Transaction amount: $600.00
+Checking balance after transaction: $600.50
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Robert McCarthy
+Checking balance before transaction: $1000.00
+Transaction Type: R
+Transaction amount: $0.00
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Jack Atanasoff
+Checking balance before transaction: $200.00
+Transaction Type: W
+Transaction amount: $200.00
+Checking balance after transaction: $0.00
+Warning: The account is below $300.
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Anne Stroustrup
+Checking balance before transaction: $300.75
+Transaction Type: W
+Transaction amount: $301.00
+Checking balance after transaction: $-0.25
+Warning: The account is below $300.
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
+Customer Name: Amanda Hollerith
+Checking balance before transaction: $500.00
+Transaction Type: W
+Transaction amount: $-2.00
+Checking balance after transaction: $502.00
+­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­---------------------------------------------
