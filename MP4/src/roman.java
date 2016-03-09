@@ -1,5 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
 
-import java.util.*;
 
 /**
  * This is a class that will handle Roman numeral calculations
@@ -9,27 +10,12 @@ import java.util.*;
 public class roman {
 	
 	private int myIntValue;
-	private String myRomanValue;
 	
  	roman()
 	{
 		myIntValue = 0;
-		myRomanValue = "";
 	}
 	
-	//Constructor overrides
-	
-	roman(String romanValue)
-	{
-		myRomanValue = romanValue;
-		myIntValue = convert_From_Roman(romanValue);
-	}
-	
-	roman(int intValue)
-	{
-		myIntValue = intValue;
-		myRomanValue = convert_To_Roman(intValue);
-	}
 	
 	
 	//Private methods
@@ -121,20 +107,32 @@ public class roman {
 			}
 		}
 		
+		
+		
 		//Return the new Roman value
 		return newRoman;
 	}
 	
+	/**
+	 * This method is for converting from Roman characters to a number.
+	 * The method will add all the Roman characters up and return an integer.
+	 * This method needs the romanCharToInt method for converting the ASCII char to a number
+	 * so that I can perform the addition.
+	 * @param romanValue - Must be a string to be converted to an integer later.
+	 * @return This method returns the integer of the added Roman numerals.
+	 */
 	private int convert_From_Roman(String romanValue)
 	{
+		
 		int newValue = 0;
 		
 		//This list will be used to iterate the String
 		List<Character> charList = new ArrayList<Character>();
 		
-		//Add each uppercase character to the list
+		//Add each upper-case character to the list
 		for(char c : romanValue.toUpperCase().toCharArray())
 		{
+			
 			charList.add(c);
 		}
 		
@@ -148,29 +146,21 @@ public class roman {
 		
 		return newValue;
 	}
-
 	
 	
-	//Public methods
-	
-	public int get_Int()
+	/**
+	 * This method is for performing the calculations. It accepts two integers and a char, the char 
+	 * needs to be the mathematical operation to be performed. This is private and is only needed internally.
+	 * If an invalid operator is passed then it will print a message saying so and break the switch.
+	 * @param firstInt 
+	 * @param secondInt
+	 * @param operator - This is a char and needs to be: / * - +
+	 * @return This function returns an in.
+	 */
+	private boolean calc_Romans(int firstInt, int secondInt, char operator)
 	{
-		return myIntValue;
-	}
-	
-	public String get_Roman()
-	{
-		return myRomanValue;
-	}
-	
-	public void print_Result()
-	{
-		System.out.println("Decimal value is: " + myIntValue);
-		System.out.println("Roman value is: " + myRomanValue);
-	}
-	
-	public boolean calc_Romans(int firstInt, int secondInt, char operator)
-	{
+		
+		//Check the operator and perform the mathematical function associated. If one isn't found then assume it's invalid.
 		switch(operator)
 		{
 		case '+':
@@ -190,11 +180,15 @@ public class roman {
 			return false;
 			
 		default:
+			//The operator is invalid, print the operator and a message saying it's invalid and return true, meaning an error occurred
 			System.out.println(operator + " is an invalid operator.");
 			return true;
 
 		}
 	}
+	
+	
+	//Public methods
 	
 	/**
 	 * This method will accept a string, it will then check the 
@@ -204,11 +198,18 @@ public class roman {
 	 */
 	public boolean get_Data(String data)
 	{
+		String firstRoman = "";
+		String secondRoman = "";
+		char operator = ' ';
+		
 		//Convert all characters to upper
 		data = data.toUpperCase();
 		
 		//Build the lists needed
-		List<Character> validCharacters = new ArrayList<Character>(Arrays.asList('I', 'V', 'X', 'L', 'C', 'D', 'M', '/', '*', '-', '+', ' '));
+		//This char array is all the valid characters that should be accepted from the user.
+		char[] validCharacters = new char[] {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+		//List<Character> validOperators = new ArrayList<Character>(Arrays.asList('/', '*', '-', '+'));
+		//This list will be a list of the chars in the string the user passed in
 		List<Character> charList = new ArrayList<Character>();
 		
 		
@@ -217,39 +218,102 @@ public class roman {
 		{
 			charList.add(c);
 		}
+
 		
-		//Check each character in string to make sure it's valid
-		for(char c : charList)
+		//Trim whitespace at the beginning
+		data = data.trim();
+		//Pull the first Roman characters out of the string
+		for(int i = 0; i < data.length(); i++)
 		{
-			if(!validCharacters.contains(c))
+			//As long as it's not a space append char to string
+			if(data.charAt(i) != ' ')
 			{
-				System.out.println("The caracter: "  + c + " is not a valid character!");
+				firstRoman = firstRoman + data.charAt(i);
+			}
+			else
+			{
+				//Delete the chars I've processed so far and break
+				data = data.substring(i - -1);
+				break;
+			}
+		}
+		
+		//Make sure the first Roman number has valid characters
+		for(char c : firstRoman.toCharArray())
+		{
+			if(!(new String(validCharacters).contains(Character.toString(c))))
+			{
+				System.out.println(firstRoman + " is an invalid Roman numeral.");
 				return true;
 			}
 		}
+		
+		
+		//Trim whitespace at the beginning
+		data = data.trim();
+		//Now we need the second Roman number
+		for(int i = 0; i < data.length(); i++)
+		{
+			//As long as it's not a space append char to string
+			if(data.charAt(i) != ' ')
+			{
+				secondRoman = secondRoman + data.charAt(i);
+			}
+			else
+			{
+				//Delete the chars I've processed so far and break
+				data = data.substring(i - -1);
+				break;
+			}
+		}
+		
+		//Make sure the second Roman number has valid characters
+		for(char c : secondRoman.toCharArray())
+		{
+			if(!(new String(validCharacters).contains(Character.toString(c))))
+			{
+				System.out.println(secondRoman + " is an invalid Roman numeral.");
+				return true;
+			}
+		}
+		
+		
+		//Finally we need the operator
+		data = data.trim();
+		operator = data.charAt(0);
+
 		
 		
 		//Get the results of the calculation
 		try
 		{
 			//Perform the calculations and return true if an error occurs
-			if(calc_Romans(convert_From_Roman(data.split(" ")[0]), convert_From_Roman(data.split(" ")[1]), data.split(" ")[2].charAt(0)))
+			if(calc_Romans(convert_From_Roman(firstRoman.trim()), convert_From_Roman(secondRoman.trim()), operator))
 			{
 				return true;
 			}
 			
-			//Print the results
-			System.out.println("The first number is " + data.split(" ")[0] + " ( " + convert_From_Roman(data.split(" ")[0]) + " )");
-			System.out.println("The second number is " + data.split(" ")[1] + " ( " + convert_From_Roman(data.split(" ")[1]) + " )");
-			System.out.println("The operator is " + data.split(" ")[2].charAt(0));
+			//Print the results of all my hard work.
+			System.out.println("The first number is " + firstRoman + " ( " + convert_From_Roman(firstRoman) + " )");
+			System.out.println("The second number is " + secondRoman + " ( " + convert_From_Roman(secondRoman) + " )");
+			System.out.println("The operator is " + operator);
 			System.out.println("The result is " + myIntValue + "( " + convert_To_Roman(myIntValue) + " )");
 		}
 		catch(ArrayIndexOutOfBoundsException ex)
 		{
-			System.out.println("Please make sure you include spaces. Ex: M M +");
+			System.out.println("Please make sure you include spaces. Example: M M +");
+			return true;
+		}
+		catch(Exception ex)
+		{
+			//Something else happened that I didn't account for. Catch that and tell the user how to format the input.
+			System.out.println("Example of input: M M +");
+			return true;
+			
 		}
 		
-		
+		//Everything ran good, return false.
 		return false;
 	}
+
 }

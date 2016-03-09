@@ -4,7 +4,9 @@ class JPHD
 {
     public static void main(String[] args)
     {
-    	Scanner keyboard = new Scanner(System.in);
+    	//Ignore the warning that the keyboard isn't closed.
+    	@SuppressWarnings("resource")
+		Scanner keyboard = new Scanner(System.in);
         
         int beforeBabyBoomers=0;
         int numBabyBoomers=0;
