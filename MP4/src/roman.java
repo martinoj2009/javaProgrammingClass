@@ -208,7 +208,7 @@ public class roman {
 		//Build the lists needed
 		//This char array is all the valid characters that should be accepted from the user.
 		char[] validCharacters = new char[] {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
-		//List<Character> validOperators = new ArrayList<Character>(Arrays.asList('/', '*', '-', '+'));
+		
 		//This list will be a list of the chars in the string the user passed in
 		List<Character> charList = new ArrayList<Character>();
 		
@@ -222,6 +222,14 @@ public class roman {
 		
 		//Trim whitespace at the beginning
 		data = data.trim();
+		
+		//Check to make sure data isn't blank
+		if(data.length() < 1)
+		{
+			System.out.println("This line is blank.");
+			return true;
+		}
+		
 		//Pull the first Roman characters out of the string
 		for(int i = 0; i < data.length(); i++)
 		{
@@ -251,6 +259,14 @@ public class roman {
 		
 		//Trim whitespace at the beginning
 		data = data.trim();
+		
+		//Check if the data is blank and inform the user no second Roman numeral was provided
+		if(data.length() < 1)
+		{
+			System.out.println("No second Roman numeral provided.");
+			return true;
+		}
+		
 		//Now we need the second Roman number
 		for(int i = 0; i < data.length(); i++)
 		{
@@ -280,7 +296,16 @@ public class roman {
 		
 		//Finally we need the operator
 		data = data.trim();
-		operator = data.charAt(0);
+		try
+		{
+			operator = data.charAt(0);
+		}
+		catch(StringIndexOutOfBoundsException ex)
+		{
+			System.out.println("Was unable to find the operator.");
+			return true;
+		}
+		
 
 		
 		
