@@ -1,0 +1,12 @@
+class test
+{
+	interface Fraction
+	{
+		
+	}
+	
+	
+	
+	
+	
+}
